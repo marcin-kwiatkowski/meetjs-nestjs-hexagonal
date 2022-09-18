@@ -49,7 +49,27 @@ export class RedirectsPrismaRepository extends RedirectsRepositoryPort {
     );
   }
 
+  async findByKey(key: string): Promise<RedirectEntity | undefined> {
+    const redirect = await this.prisma.redirect.findFirst({
+      where: {
+        key,
+      },
+    });
+
+    if (redirect === null) {
+      return undefined;
+    }
+
+    return new RedirectEntity(
+      redirect.id,
+      redirect.originalUrl,
+      redirect.key,
+      this.buildShortLink(redirect.key),
+      redirect.createdAt,
+    );
+  }
+
   private buildShortLink(key: string): string {
-    return `http://localhost:3000/link/${key}`;
+    return `http://localhost:3000/links/${key}`;
   }
 }

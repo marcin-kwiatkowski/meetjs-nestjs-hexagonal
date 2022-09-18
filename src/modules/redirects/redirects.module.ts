@@ -5,9 +5,10 @@ import { RedirectsService } from './core/application/redirects.service';
 import { PrismaService } from '../prisma/prisma.service';
 import { RedirectsRepositoryPort } from './core/ports/redirects-repository.port';
 import { RedirectsPrismaRepository } from './adapters/repositories/redirects.prisma-repository';
+import { LinksController } from './adapters/api/links.controller';
 
 @Module({
-  controllers: [RedirectsController],
+  controllers: [RedirectsController, LinksController],
   providers: [
     {
       provide: RedirectsRepositoryPort,

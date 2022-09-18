@@ -24,4 +24,8 @@ export class RedirectsService extends RedirectsPort {
 
     return this.redirectRepository.create(url, key);
   }
+
+  async findByKey(key: string): Promise<RedirectEntity | undefined> {
+    return this.redirectRepository.findByKey(key);
+  }
 }

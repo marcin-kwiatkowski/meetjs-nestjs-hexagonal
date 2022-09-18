@@ -5,4 +5,5 @@ export abstract class RedirectsRepositoryPort {
   public abstract findByOriginalUrl(
     url: string,
   ): Promise<RedirectEntity | undefined>;
+  public abstract findByKey(key: string): Promise<RedirectEntity | undefined>;
 }
