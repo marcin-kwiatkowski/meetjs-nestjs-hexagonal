@@ -1,8 +1,8 @@
 {
-  "name": "hex",
+  "name": "meetjs-nestjs-hexagonal",
   "version": "0.0.1",
   "description": "",
-  "author": "",
+  "author": "Marcin Kwiatkowski <m.kwiatkowski@int.pl>",
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
