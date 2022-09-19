@@ -4,8 +4,7 @@
 
 Before starting the project, please make sure that you have installed:
 
-- Docker
-- Node.js (16.17.0)
+- [Docker](https://www.docker.com)
 - [NVM](https://github.com/nvm-sh/nvm)
 
 ## Running the project
@@ -16,7 +15,7 @@ Before starting the project, please make sure that you have installed:
 cd meetjs-nestjs-hexagonal
 ```
 
-1. Start the database (PostgreSQL):
+2. Start the database (PostgreSQL):
 
 ```
 docker-compose up
@@ -24,19 +23,21 @@ docker-compose up
 
 The database is listening on port 5432.
 
-1. Use Node.js defined by NVM:
+3. Use Node.js defined by NVM:
 
 ```
 nvm use
 ```
 
-1. Install NPM packages:
+It may happen that you don't have the required Node.js version. NVM will guide you to install it.
+
+4. Install NPM packages:
 
 ```
 npm install
 ```
 
-1. Run Prisma migrations:
+5. Run Prisma migrations:
 
 ```
 npm run db:migrate
@@ -44,7 +45,7 @@ npm run db:migrate
 
 Having executed this command there should be `redirects` table in the database.
 
-1. Start NestJS project:
+6. Start NestJS project:
 
 ```
 npm run start
