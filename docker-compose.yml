@@ -5,7 +5,7 @@ services:
     ports:
       - '5432:5432'
     environment:
-      # username: password
+      # username: postgres
       POSTGRES_PASSWORD: password
       POSTGRES_DB: link-shortener
     volumes:
