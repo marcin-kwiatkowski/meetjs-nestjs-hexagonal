@@ -1,4 +1,4 @@
-# Meet.js Białystok: Hexagonal architecture in NestJS
+# Example of implementation of Hexagonal Architecture in NestJS
 
 ## Requirements
 
